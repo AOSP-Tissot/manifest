@@ -8,7 +8,7 @@
   <remote name="GitHub"
           fetch="https://github.com/" />
 
-  <project path="build/make" name="aosp-tissot/build" groups="pdk" remote="aosp-tissot"  >
+  <project path="build/make" name="build" groups="pdk" remote="aosp-tissot"  >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -23,10 +23,11 @@
   </project>
   <project path="bionic" name="bionic" groups="pdk" remote="aosp-tissot" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="aosp-tissot" />
-  <project path="frameworks/base" name="aosp-tissot/frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="aosp-tissot"  />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="aosp-tissot"  />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="aosp-tissot" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="aosp-tissot" />
-  <project path="packages/apps/Settings" name="aosp-tissot/packages_apps_Settings" groups="pdk-fs" remote="aosp-tissot"  />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="aosp-tissot"  />
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-fs" remote="aosp-tissot"  />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="aosp-tissot" />
   <project path="system/media" name="system_media" groups="pdk" remote="aosp-tissot" />
 
