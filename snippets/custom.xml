@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="AOSP-ROM"
-          fetch="https://github.com/AOSP-ROM/"
+  <remote name="aosp-tissot"
+          fetch="https://github.com/aosp-tissot/"
           revision="refs/heads/oreo-mr1" />
 
   <remote name="GitHub"
           fetch="https://github.com/" />
 
-  <project path="build/make" name="build" groups="pdk" remote="AOSP-ROM" >
+  <project path="build/make" name="aosp-tissot/build" groups="pdk" remote="aosp-tissot"  >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -17,21 +17,21 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="AOSP-ROM" >
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="aosp-tissot" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="bionic" name="bionic" groups="pdk" remote="AOSP-ROM" />
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="AOSP-ROM" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="AOSP-ROM" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="AOSP-ROM" />
-  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="AOSP-ROM" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="AOSP-ROM" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="AOSP-ROM" />
-  <project path="system/media" name="system_media" groups="pdk" remote="AOSP-ROM" />
+  <project path="bionic" name="bionic" groups="pdk" remote="aosp-tissot" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="aosp-tissot" />
+  <project path="frameworks/base" name="aosp-tissot/frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="aosp-tissot"  />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="aosp-tissot" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="aosp-tissot" />
+  <project path="packages/apps/Settings" name="aosp-tissot/packages_apps_Settings" groups="pdk-fs" remote="aosp-tissot"  />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="aosp-tissot" />
+  <project path="system/media" name="system_media" groups="pdk" remote="aosp-tissot" />
 
   <!-- Vendors -->
-  <project path="vendor/aosp" name="vendor_aosp" remote="AOSP-ROM" />
-  <project path="vendor/pixel" name="vendor_pixel" remote="AOSP-ROM" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="aosp-tissot" />
+  <poject path="vendor/pixel" name="vendor_pixel" remote="aosp-tissot" />
 
 </manifest>
